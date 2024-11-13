@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7398691133216378833
+--- !u!1 &5990285646432556304
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6813555072522058607}
-  - component: {fileID: 1616607636957971023}
-  - component: {fileID: 924730806743476402}
-  - component: {fileID: 2057407563299510947}
-  - component: {fileID: 2213109232691882947}
+  - component: {fileID: 7158248870061168998}
+  - component: {fileID: 325102394989193266}
+  - component: {fileID: 4202743743094539887}
+  - component: {fileID: 4810952065762880312}
+  - component: {fileID: 3198511764409829469}
   m_Layer: 5
   m_Name: TextHealthBar
   m_TagString: Untagged
@@ -20,13 +20,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &6813555072522058607
+--- !u!224 &7158248870061168998
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7398691133216378833}
+  m_GameObject: {fileID: 5990285646432556304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -39,21 +39,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1616607636957971023
+--- !u!222 &325102394989193266
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7398691133216378833}
+  m_GameObject: {fileID: 5990285646432556304}
   m_CullTransparentMesh: 1
---- !u!114 &924730806743476402
+--- !u!114 &4202743743094539887
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7398691133216378833}
+  m_GameObject: {fileID: 5990285646432556304}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -136,29 +136,30 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &2057407563299510947
+--- !u!114 &4810952065762880312
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7398691133216378833}
+  m_GameObject: {fileID: 5990285646432556304}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e7aa5c0bec2d4446863d9af39e2ee49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _person: {fileID: 0}
---- !u!114 &2213109232691882947
+  _healthBar: {fileID: 3198511764409829469}
+--- !u!114 &3198511764409829469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7398691133216378833}
+  m_GameObject: {fileID: 5990285646432556304}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: edb235b0056ea0648a660540d482d52a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthText: {fileID: 924730806743476402}
+  _healthText: {fileID: 4202743743094539887}

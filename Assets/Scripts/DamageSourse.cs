@@ -1,24 +1,7 @@
-using UnityEngine;
-using UnityEngine.UI;
-
-public class DamageSourse : MonoBehaviour
+public class DamageSourse : ActionButton
 {
-    [SerializeField] private Button _button;
-    [SerializeField] private int _damageValue;
-    [SerializeField] private DamageablePerson _target;
-
-    private void OnEnable()
+    protected override void HandleButtonClick()
     {
-        _button.onClick.AddListener(HandleButtonClick);
-    }
-
-    private void OnDisable()
-    {
-        _button.onClick.RemoveListener(HandleButtonClick);
-    }
-
-    private void HandleButtonClick()
-    {
-        _target.TakeHit(_damageValue);
+        Target.TakeHit(Value);
     }
 }

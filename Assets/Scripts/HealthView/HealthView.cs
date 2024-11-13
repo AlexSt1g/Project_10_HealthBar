@@ -1,11 +1,9 @@
-using System;
 using UnityEngine;
 
 public class HealthView : MonoBehaviour
 {
     [SerializeField] private DamageablePerson _person;
-
-    public event Action <int, int> DisplayedHealthChanged;
+    [SerializeField] private HealthBar _healthBar;    
 
     private void Start()
     {
@@ -24,6 +22,6 @@ public class HealthView : MonoBehaviour
 
     private void DisplayHealth(int currentHealth, int maxHealth)
     {
-        DisplayedHealthChanged?.Invoke(currentHealth, maxHealth);
+        _healthBar.DisplayHealth(currentHealth, maxHealth);        
     }
 }

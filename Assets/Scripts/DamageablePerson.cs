@@ -15,25 +15,16 @@ public class DamageablePerson : MonoBehaviour
 
     public virtual void TakeHit(int damageValue)
     {
-        if (damageValue < 0)
-            throw new InvalidOperationException(nameof(damageValue));
-        else if (damageValue > Health)
-            Health = 0;
-        else
-            Health -= damageValue;
+        damageValue = Mathf.Clamp(damageValue, 0, Health);
+        Health -= damageValue;
 
         HealthChanged?.Invoke(Health, MaxHealth);
     }
 
     public virtual void Heal(int healingValue)
     {
-        if (healingValue < 0)
-            throw new InvalidOperationException(nameof(healingValue));
-        else
-            Health += healingValue;
-
-        if (Health > MaxHealth)
-            Health = MaxHealth;
+        healingValue = Mathf.Clamp(healingValue, 0, MaxHealth - Health);
+        Health += healingValue;
 
         HealthChanged?.Invoke(Health, MaxHealth);
     }
