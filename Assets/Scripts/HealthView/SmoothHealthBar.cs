@@ -14,10 +14,10 @@ public class SmoothHealthBar : HealthBar
         if (_coroutine != null)        
             StopCoroutine(_coroutine);
         
-        _coroutine = StartCoroutine(SlowChangeSliderValue(currentHealth, maxHealth));
+        _coroutine = StartCoroutine(ChangeSliderValueSmoothly(currentHealth, maxHealth));
     }
 
-    private IEnumerator SlowChangeSliderValue(int currentHealth, int maxHealth)
+    private IEnumerator ChangeSliderValueSmoothly(int currentHealth, int maxHealth)
     {
         float targetSliderHealthValue = GetHealthValueForSlider(currentHealth, maxHealth);
         float currentSliderHealthValue = _healthBarSlider.value;
